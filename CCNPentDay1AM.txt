@@ -89,7 +89,7 @@ CCNPSkillsNow: Etherchannel with LinkAggregationControlProtocol:
 WARNING: THREE CABLES IS BETTER THAN ONE!
 @taas/BABA:
 config t
-Int Range fa0/10-12
+ Int Range fa0/10-12
  channel-group 1 mode active
  channel-protocol Lacp
  do sh etherchannel summary
@@ -146,9 +146,9 @@ vlan 10
 vlan 50
    name IPCCTVLAN
 vlan 69
-   name nameMO
+   name lemuel
 vlan 70
-    name FAVEcolor
+    name Vivamax
 vlan 71
     name HR-fu
 vlan 100
@@ -185,10 +185,10 @@ config t
 ip routing
 ip dhcp pool CAMERA6
 host 10.22.50.6 255.255.255.0
-client-identifier 001a.0704.7f5b
+client-identifier 001a.0704.7f6a
 ip dhcp pool CAMERA8
 host 10.22.50.8 255.255.255.0
-client-identifier 001a.0709.c258 
+client-identifier 001a.0709.c238
 end
 show ip dhcp binding
 
@@ -263,12 +263,12 @@ ephone-dn 8
 ephone-dn 10
   number 2298
 Ephone 1
-  Mac-address cafe.face.baba
+  Mac-address ccd8.c1fb.0817
   type 8945
   button 1:8 2:7 3:6 4:9
   restart
 Ephone 2
-  Mac-address fafa.caca.baba
+  Mac-address ccd8.c1fb.09ff
   type 8945
   button 1:4 2:3 3:2 4:10
   restart  
@@ -301,18 +301,18 @@ configure terminal
  destination-pattern 11..
  session target ipv4:10.11.100.8
  codec g711ULAW
-  !dial-peer voice 12 Voip
-  !destination-pattern 12..
-  !session target ipv4:10.12.100.8
-  !codec g711ULAW
+  dial-peer voice 12 Voip
+  destination-pattern 12..
+  session target ipv4:10.12.100.8
+  codec g711ULAW
 dial-peer voice 21 Voip
  destination-pattern 21..
  session target ipv4:10.21.100.8
  codec g711ULAW
-dial-peer voice 22 Voip
- destination-pattern 22..
- session target ipv4:10.22.100.8
- codec g711ULAW
+! dial-peer voice 22 Voip
+ ! destination-pattern 22..
+ ! session target ipv4:10.22.100.8
+ ! codec g711ULAW
 dial-peer voice 31 Voip
  destination-pattern 31..
  session target ipv4:10.31.100.8
